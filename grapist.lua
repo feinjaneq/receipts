@@ -1,5 +1,4 @@
--- Gui to Lua (mobile-friendly version)
--- Version: 3.3
+-- Gui to Lua (mobile-optimized, 40% width)
 
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
@@ -16,17 +15,18 @@ local UICorner_2 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 
--- Properties
+-- ScreenGui setup
 ScreenGui.Parent = playerGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ScreenGui.ResetOnSpawn = false
 
+-- Frame setup
 Frame.Parent = ScreenGui
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.5, 0, 0.4, 0)
-Frame.Size = UDim2.new(0.8, 0, 0.3, 0) -- larger and responsive
+Frame.Size = UDim2.new(0.4, 0, 0.25, 0) -- 40% width
 UICorner.Parent = Frame
 
 -- Title Label
@@ -34,7 +34,7 @@ TextLabel.Parent = Frame
 TextLabel.AnchorPoint = Vector2.new(0.5, 0)
 TextLabel.BackgroundTransparency = 1
 TextLabel.Position = UDim2.new(0.5, 0, 0.05, 0)
-TextLabel.Size = UDim2.new(0.9, 0, 0.2, 0)
+TextLabel.Size = UDim2.new(0.95, 0, 0.2, 0)
 TextLabel.Font = Enum.Font.FredokaOne
 TextLabel.Text = "ASTRO HUB AJ"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -47,7 +47,7 @@ TextButton.AnchorPoint = Vector2.new(0.5, 0)
 TextButton.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
 TextButton.BorderSizePixel = 0
 TextButton.Position = UDim2.new(0.5, 0, 0.35, 0)
-TextButton.Size = UDim2.new(0.9, 0, 0.35, 0)
+TextButton.Size = UDim2.new(0.9, 0, 0.35, 0) -- scaled to frame width
 TextButton.Font = Enum.Font.FredokaOne
 TextButton.Text = "AUTOJOINER: OFF"
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -60,7 +60,7 @@ TextLabel_2.Parent = Frame
 TextLabel_2.AnchorPoint = Vector2.new(0.5, 0)
 TextLabel_2.BackgroundTransparency = 1
 TextLabel_2.Position = UDim2.new(0.5, 0, 0.75, 0)
-TextLabel_2.Size = UDim2.new(0.9, 0, 0.15, 0)
+TextLabel_2.Size = UDim2.new(0.95, 0, 0.15, 0)
 TextLabel_2.Font = Enum.Font.FredokaOne
 TextLabel_2.Text = "discord.gg/wR3rgRaDjN"
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
